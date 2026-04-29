@@ -10,10 +10,6 @@ export const geminiModel = new ChatGoogle({
     streaming: false
 });
 
-export const ollamaModel = new ChatXAI("grok/compound-mini", {
-    apiKey: config.XAI_API_KEY
-});
-
 export const mistralAIModel = new ChatMistralAI({
     model: 'mistral-medium-latest',
     apiKey: config.MISTRAL_API_KEY,
