@@ -1,19 +1,25 @@
 import express from 'express';
 import useGraph from './services/ai.graphModel.js'
 import cors from 'cors'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin : 'http://localhost:5175',
+    origin : 'http://localhost:5173',
     methods : ['get','post'],
     credentials : true
 }))
 
-app.get('/', async (req,res) => {
-    const result = await useGraph("Write an code for Factorial function in js")
+// Serve static files from dist folder
+app.use(express.static(path.join(__dirname, './dist')))
 
-    res.json(result)
+
+
+app.get('/', async (req,res) => {
+    res.sendFile("index.html")
 })
 
 app.post('/invoke', async (req,res) => {
