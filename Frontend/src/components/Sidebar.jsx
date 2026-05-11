@@ -86,7 +86,7 @@ export default function Sidebar({ history, onSelect, onClear, activeQuery }) {
               <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
             </svg>
           </div>
-          <span className="text-[11px] text-[#4e4e72] font-medium">AI Battle</span>
+          <span className="text-[11px] text-[#4e4e72] font-medium">CodeColosseum</span>
         </div>
       </div>
     </aside>

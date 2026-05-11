@@ -83,7 +83,7 @@ export default function App() {
               </svg>
             </div>
             <span className="text-[14px] font-semibold text-[#f1f0f9] tracking-tight">
-              AI Battle
+              CodeColosseum
             </span>
             <span className="hidden sm:inline text-[10px] text-[#4e4e72] font-medium px-2 py-0.5 bg-[#13131f] border border-[#1e1e30] rounded-full">
               Beta
